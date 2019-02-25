@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:background="@drawable/clientbg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/netwhite"
+        android:id="@+id/GL1"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IP地址:"
+                android:textColor="@color/background_floating_material_dark"
+                android:textSize="@dimen/activity_vertical_margin"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/text_ip" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_ip"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/background_floating_material_dark"
+                android:textSize="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="10dp"
+                android:text="端口号:"
+                android:id="@+id/text_port" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/edit"
+            android:layout_alignLeft="@+id/send"
+            android:layout_alignStart="@+id/send">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="请输入IP地址..."
+                android:text="172.16.12.158"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp"
+                android:id="@+id/edit_ip" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="请输入端口号..."
+                android:text="8888"
+                android:textColor="@android:color/black"
+                android:id="@+id/edit_port"
+                android:layout_below="@+id/edit_ip"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="连接"
+            android:id="@+id/btn_connect"
+            android:background="@color/accent_material_light"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"/>
+    </GridLayout>
+
+
+</RelativeLayout>

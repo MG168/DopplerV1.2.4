@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mgstudio.dopplerv124">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activities.Loadin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- <activity android:name=".Activities.Welcome" /> -->
+        <activity android:name=".Activities.MainActivity" />
+        <!-- <activity android:name=".DefButton.DefImagButton" /> -->
+        <!-- <activity android:name=".DefButton.RulerView" /> -->
+        <activity android:name=".Activities.Buttonactivities.FocusActivity" />
+        <activity android:name=".Activities.Buttonactivities.RangeActivity" />
+        <activity android:name=".Activities.Buttonactivities.MeasureActivity" />
+        <activity android:name=".Activities.Buttonactivities.NoteActivity" />
+        <activity android:name=".Activities.Buttonactivities.ClearActivity" />
+        <activity android:name=".Activities.Buttonactivities.WaveActivity" />
+        <activity android:name=".Activities.Buttonactivities.SoundActivity" />
+        <activity android:name=".Activities.Buttonactivities.BackActivity" />
+        <activity android:name=".Activities.Buttonactivities.SaveVideoActivity" />
+        <activity android:name=".Activities.Buttonactivities.Mode1Activity" />
+        <activity android:name=".Activities.Buttonactivities.Mode2Activity" />
+        <activity android:name=".Activities.Buttonactivities.StopActivity" />
+        <activity android:name=".Activities.Buttonactivities.LineActivity" />
+        <activity android:name=".Activities.Buttonactivities.PatientActivity" />
+        <activity android:name=".Activities.Buttonactivities.EditActivity" />
+        <activity android:name=".Activities.Buttonactivities.SaveImageActivity"></activity>
+    </application>
+
+</manifest>

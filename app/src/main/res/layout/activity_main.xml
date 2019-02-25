@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="2">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:defimag="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lltitle"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#7777ff">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                        android:id="@+id/defimgbtn_wifi"
+                        android:layout_width="20dp"
+                        android:layout_height="29dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="5dp"
+                        defimag:icon="@drawable/icon_wifi">
+                    </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="0dp"
+                        android:gravity="right"
+                        android:text="V1.0.0 "
+                        android:layout_alignParentRight="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/black"
+                >
+                <TextView
+                    android:id="@+id/mytime"
+                    android:text="time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GN:"
+                        android:textColor="@android:color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:layout_marginLeft="15dp"
+                        android:text="1"
+                        android:textSize="20dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dB"
+                        android:textColor="@android:color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20dp"
+                        />
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@android:color/white"
+                    android:text="0.00 mm"
+                    android:textSize="20dp"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <com.mgstudio.dopplerv124.DefButton.RulerView
+                    android:id="@+id/height_ruler"
+                    android:layout_width="11dp"
+                    android:layout_height="300dp"
+                    android:background="@android:color/black"
+                    app:rulerColor="@android:color/white"
+                    app:rulerDivideByFiveHeight="20dp"
+                    app:rulerDivideByFiveWidth="2dp"
+                    app:rulerDivideByTenHeight="25dp"
+                    app:rulerDivideByTenWidth="3dp"
+                    app:rulerHighlightColor="@color/colorPrimary"
+                    app:rulerIntervalDistance="15dp"
+                    app:rulerIntervalValue="0.01"
+                    app:rulerIsDivideByFive="true"
+                    app:rulerIsDivideByTen="true"
+                    app:rulerLineHeight="15dp"
+                    app:rulerLineWidth="1dp"
+                    app:rulerMaxValue="55"
+                    app:rulerMinValue="0"
+                    app:rulerOrientation="vertical"
+                    app:rulerRetainLength="3"
+                    app:rulerTextBaseLineDistance="3dp"
+                    app:rulerTextColor="@android:color/black"
+                    app:rulerTextSize="15dp" />
+
+
+                <!--<com.mgstudio.dopplerv124.DefButton.DefImagButton-->
+                    <!--android:id="@+id/encoder_surface"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:visibility="visible"/>-->
+
+                <!--<SurfaceView-->
+                    <!--android:id="@+id/decoder_surface"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:visibility="visible"/>-->
+                <ImageView
+                    android:id="@+id/image_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="163dp"
+                    android:background="@android:color/black"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/text_run"
+                android:background="@android:color/black"
+                android:gravity="right"
+                android:text="运行"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_ping"
+                android:background="@android:color/black"
+                android:layout_marginLeft="200dp"
+                android:text="100"
+                android:textSize="25dp"
+                android:textColor="@android:color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_max"
+                android:background="@android:color/black"
+                android:text="/100"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"/>
+            <!--<Button-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:gravity="left"-->
+                <!--android:text="冻结"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="25dp"-->
+                <!--android:background="@android:color/black"-->
+                <!--/>-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rlmain"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:orientation="horizontal">
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_plus"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="1"
+                    defimag:icon="@drawable/plus"
+                    defimag:texttitle="增益">
+
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="2"
+                    defimag:icon="@drawable/focus"
+                    defimag:texttitle="聚焦">
+
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="3"
+                    defimag:icon="@drawable/range"
+                    defimag:texttitle="动态范围">
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_measure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="4"
+                    defimag:icon="@drawable/measurement"
+                    defimag:texttitle="测量">
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="5"
+                    defimag:icon="@drawable/note"
+                    defimag:texttitle="注释">
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="6"
+                    defimag:icon="@drawable/clear"
+                    defimag:texttitle="清除">
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_minus"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    defimag:icon="@drawable/minus"
+                    android:layout_weight="1"
+                    defimag:testid="7"
+                    defimag:texttitle="增益">
+
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_wave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="8"
+                    defimag:icon="@drawable/wave"
+                    defimag:texttitle="谐波">
+
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:texttitle="降噪"
+                    defimag:testid="9"
+                    defimag:icon="@drawable/sound">
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:texttitle="回放"
+                    defimag:testid="10"
+                    defimag:icon="@drawable/back">
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_saveimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:texttitle="保存图像"
+                    defimag:testid="11"
+                    defimag:icon="@drawable/saveimage">
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_savevideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:texttitle="保存视频"
+                    defimag:testid="12"
+                    defimag:icon="@drawable/savevideo">
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_mode1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="13"
+                    defimag:icon="@drawable/a"
+                    defimag:texttitle="模式">
+
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_mode2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="14"
+                    defimag:icon="@drawable/b"
+                    defimag:texttitle="模式">
+
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="15"
+                    defimag:icon="@drawable/snowflake"
+                    defimag:texttitle="冻结">
+
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="16"
+                    defimag:icon="@drawable/line"
+                    defimag:texttitle="穿刺线">
+
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_patient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="17"
+                    defimag:icon="@drawable/patient"
+                    defimag:texttitle="病例">
+
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+                <com.mgstudio.dopplerv124.DefButton.DefImagButton
+                    android:id="@+id/defimgbtn_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    defimag:testid="18"
+                    defimag:icon="@drawable/edit"
+                    defimag:texttitle="设置">
+                </com.mgstudio.dopplerv124.DefButton.DefImagButton>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
